@@ -58,4 +58,9 @@ function DialogueService.Client:FollowDialogue(dialogue: {}, choice: string)
     return nextDialogue
 end
 
+function DialogueService.Client:GetSubDialogue(npcName: string, name: string)
+    local dialogue = Dialogues[npcName][name]
+        return dialogue
+end
+
 return DialogueService
