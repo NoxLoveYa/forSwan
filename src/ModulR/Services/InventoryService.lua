@@ -119,4 +119,9 @@ function InventoryService.Server:RemoveItem(player, itemName, quantity)
 	end
 end
 
+function InventoryService.Client:RequestInventory(player)
+    print("Client requested inventory for " .. player.Name)
+    return table.clone(Inventory[player.UserId] and Inventory[player.UserId].items or {})
+end
+
 return InventoryService
