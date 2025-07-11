@@ -28,6 +28,17 @@ local function yap(text, textLabel)
 	end)
 end
 
+local function idk(choiceData, YapGui, ChoiceGui)
+	yap(choiceData.Text, YapGui.TextLabel)
+	for i, conn in ipairs(connections) do
+		conn:Disconnect() -- Disconnect previous connections to avoid memory leaks
+		local choiceButton = ChoiceGui:FindFirstChild("Button" .. i)
+		if choiceButton then
+			choiceButton.Visible = false
+		end
+	end
+end
+
 -- Init (qui va être supprimé lors de l'init du core)
 function NpcService:Initialize()
 	ModulR:GetEventBus():Broadcast("NpcServiceInit")
@@ -62,7 +73,7 @@ function NpcService:Initialize()
 				choiceButton.Visible = true
 
 				table.insert(connections, choiceButton.MouseButton1Click:Connect(function()
-					yap(choiceData.Text, YapGui.TextLabel)
+					idk(choiceData, YapGui, ChoiceGui)
 				end))
 
 				choiceIndex += 1
