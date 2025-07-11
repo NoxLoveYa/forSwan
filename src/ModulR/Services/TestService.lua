@@ -12,9 +12,4 @@ function test:TestMethod()
     print("TestMethod called from TestService")
 end
 
-function test:Destroy()
-    -- Cleanup logic if needed
-    print("TestService is being destroyed.")
-end
-
 return test

@@ -2,6 +2,7 @@
   "name": "ModulR",
   "tree": {
     "$className": "DataModel",
+    "$ignoreUnknownInstances": true,
     "ReplicatedStorage": {
       "ModulR": {
         "$path": "src/ModulR"
@@ -9,7 +10,7 @@
     },
     "ServerScriptService": {
       "ModulRTest": {
-        "$path": "src/Server"
+        "$path": "src/ServerTests"
       }
     }
   }
