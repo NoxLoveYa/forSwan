@@ -1,0 +1,16 @@
+{
+  "name": "ModulR",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "ModulR": {
+        "$path": "src/ModulR"
+      }
+    },
+    "ServerScriptService": {
+      "ModulRTest": {
+        "$path": "src/Server"
+      }
+    }
+  }
+}
