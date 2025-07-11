@@ -11,7 +11,7 @@ local DialogueService: ModulRInterfaces.Service = {
 	Shared = {},
 }
 
-local Dialogues = {}
+Dialogues = {}
 
 -- Local functions
 local function loadDialogues()
@@ -40,10 +40,8 @@ function DialogueService:Destroy()
 end
 
 function DialogueService.Client:GetDialogue(npcName: string)
-	-- This function would start a dialogue with the NPC
-    print("[DialogueService] - Getting dialogue for NPC:", npcName)
     local dialogue = Dialogues[npcName]
-    print("[DialogueService] - Dialogue found:", dialogue)
+    return dialogue
 end
 
 function DialogueService.Client:FollowDialogue(dialogue: {}, choice: string)
