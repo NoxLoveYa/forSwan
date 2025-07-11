@@ -6,12 +6,22 @@
     "ReplicatedStorage": {
       "ModulR": {
         "$path": "src/ModulR"
+      },
+      "Data": {
+        "$path": "src/Data"
       }
     },
     "ServerScriptService": {
-      "ModulRTest": {
-        "$path": "src/ServerTests"
+      "ModulRServer": {
+        "$path": "src/Server"
       }
-    }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "ModulRClient": {
+          "$path": "src/Client"
+        }
+      }
+    }    
   }
 }
