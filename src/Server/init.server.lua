@@ -1,7 +1,7 @@
 local ModulR = require(game.ReplicatedStorage.ModulR)
 
-ModulR:AddService("LoggerService", require(script.Parent.Services.LoggerService))
-ModulR:AddService("TestService", require((script.Parent.Services.TestService)))
+ModulR:AddService("LoggerService", require(script.Services.LoggerService))
+ModulR:AddService("TestService", require(script.Services.TestService))
 ModulR:Initialize()
 
 
